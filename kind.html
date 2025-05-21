@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stap 2 – Gegevens van het kind</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="form-container">
+      <!-- Stapnavigatie -->
+      <div class="step-tabs">
+        <div class="step-tab">Stap 1: Gegevens van ouder/betaler</div>
+        <div class="step-tab active">Stap 2: Gegevens van het kind</div>
+        <div class="step-tab">Stap 3: Overzicht & bevestiging</div>
+      </div>
+
+      <!-- Formulier kind 1 -->
+      <section class="form-step">
+        <!-- <div class="form-header">
+          <h2>Gegevens van je kind</h2>
+          <span class="kind-prijs">Kind 1: €135</span>
+        </div>
+        <p class="form-instructions">
+          Vul hier de gegevens in van het kind dat je wil inschrijven.
+        </p> -->
+        <div class="form-header">
+          <h2 class="form-title">Gegevens van je kind</h2>
+          <span class="kind-prijs">Kind 1: €135</span>
+        </div>
+        <p class="form-instructions">
+          Vul hier de gegevens in van het kind dat je wil inschrijven.
+        </p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="kind-voornaam">Voornaam*</label>
+            <input
+              type="text"
+              id="kind-voornaam"
+              name="kind-voornaam"
+              placeholder="Voer de voornaam van het kind in"
+            />
+          </div>
+          <div class="form-group">
+            <label for="kind-achternaam">Achternaam*</label>
+            <input
+              type="text"
+              id="kind-achternaam"
+              name="kind-achternaam"
+              placeholder="Voer de achternaam van het kind in"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="kind-rrn">Rijksregisternummer*</label>
+            <input
+              type="text"
+              id="kind-rrn"
+              name="kind-rrn"
+              placeholder="Voer het rijksregisternummer van het kind in"
+            />
+            <small>Formaat: xx.xx.xx-xxx.xx</small>
+          </div>
+          <div class="form-group">
+            <label for="kind-geboortedatum">Geboortedatum*</label>
+            <input
+              type="date"
+              id="kind-geboortedatum"
+              name="kind-geboortedatum"
+              placeholder="DD/MM/YYYY"
+            />
+          </div>
+        </div>
+
+        <div class="form-row gender-select">
+          <label>Geslacht*</label>
+          <label
+            ><input type="radio" name="geslacht" value="jongen" /> Jongen</label
+          >
+          <label
+            ><input type="radio" name="geslacht" value="meisje" /> Meisje</label
+          >
+          <label><input type="radio" name="geslacht" value="x" /> X</label>
+        </div>
+
+        <!-- <div class="form-row kampkeuze-select">
+          <label>Kampkeuze*</label>
+          <label
+            ><input type="radio" name="kampkeuze" value="spel" /> Sport en spel
+            – geboortejaar '21-‘19 - 1ste kleuterklas tem 3e kleuterklas</label
+          >
+          <label
+            ><input type="radio" name="kampkeuze" value="omni" /> Omnisportkamp
+            – geboortejaar '18-‘13 - 1ste leerjaar tem 6e leerjaar</label
+          >
+        </div> -->
+
+        <div class="form-row kampkeuze-select">
+          <label>Kampkeuze*</label>
+
+          <div class="kampkeuze-option">
+            <input type="radio" id="kamp-spel" name="kampkeuze" value="spel" />
+            <label for="kamp-spel">
+              Sport en spel – geboortejaar '21-‘19 - 1ste kleuterklas tem 3e
+              kleuterklas
+            </label>
+          </div>
+
+          <div class="kampkeuze-option">
+            <input type="radio" id="kamp-omni" name="kampkeuze" value="omni" />
+            <label for="kamp-omni">
+              Omnisportkamp – geboortejaar '18-‘13 - 1ste leerjaar tem 6e
+              leerjaar
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="medische-info"
+              >Zijn er medische aandachtspunten die we vóór de kampweek moeten
+              weten?</label
+            >
+            <textarea
+              id="medische-info"
+              name="medische-info"
+              placeholder="Typ hier..."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="groep-voorkeur"
+              >Heeft jouw kind een voorkeur om bij iemand in de groep te zitten?
+              (optioneel)</label
+            >
+            <textarea
+              id="groep-voorkeur"
+              name="groep-voorkeur"
+              placeholder="Typ hier..."
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="form-add-button">
+          <button type="button" class="btn add-kind">
+            ➕ Voeg nog een kind toe
+          </button>
+        </div>
+
+        <!-- EXTRA KIND 2 -->
+        <section class="form-step extra-kind">
+          <div class="extra-kind-header">
+            <h3>Vul nu de info in voor het volgende kind</h3>
+            <p>
+              Vul hier de gegevens in van wie je de betaling uitvoert, zodat
+              alles correct verwerkt wordt.
+            </p>
+          </div>
+
+          <div class="form-header">
+            <h2>Gegevens van je kind</h2>
+            <span class="kind-prijs">Kind 2: €125</span>
+          </div>
+
+          <p class="form-instructions">
+            Laat ons ook weten wie je nog inschrijft voor deze kampweek.
+          </p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="kind2-voornaam">Voornaam*</label>
+              <input
+                type="text"
+                id="kind2-voornaam"
+                name="kind2-voornaam"
+                placeholder="Voer de voornaam van het kind in"
+              />
+            </div>
+            <div class="form-group">
+              <label for="kind2-achternaam">Achternaam*</label>
+              <input
+                type="text"
+                id="kind2-achternaam"
+                name="kind2-achternaam"
+                placeholder="Voer de achternaam van het kind in"
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="kind2-rrn">Rijksregisternummer*</label>
+              <input
+                type="text"
+                id="kind2-rrn"
+                name="kind2-rrn"
+                placeholder="Voer het rijksregisternummer van het kind in"
+              />
+              <small>Formaat: xx.xx.xx-xxx.xx</small>
+            </div>
+            <div class="form-group">
+              <label for="kind2-geboortedatum">Geboortedatum*</label>
+              <input
+                type="date"
+                id="kind2-geboortedatum"
+                name="kind2-geboortedatum"
+                placeholder="DD/MM/YYYY"
+              />
+            </div>
+          </div>
+
+          <div class="form-row gender-select">
+            <label>Geslacht*</label>
+            <label
+              ><input type="radio" name="kind2-geslacht" value="jongen" />
+              Jongen</label
+            >
+            <label
+              ><input type="radio" name="kind2-geslacht" value="meisje" />
+              Meisje</label
+            >
+            <label
+              ><input type="radio" name="kind2-geslacht" value="x" /> X</label
+            >
+          </div>
+
+          <div class="form-row kampkeuze-select">
+            <label>Kampkeuze*</label>
+            <div class="kampkeuze-option">
+              <input
+                type="radio"
+                id="kamp2-spel"
+                name="kind2-kampkeuze"
+                value="spel"
+              />
+              <label for="kamp2-spel"
+                ><strong>Sport en spel</strong> – geboortejaar '21-‘19 - 1ste
+                kleuterklas tem 3e kleuterklas</label
+              >
+            </div>
+            <div class="kampkeuze-option">
+              <input
+                type="radio"
+                id="kamp2-omni"
+                name="kind2-kampkeuze"
+                value="omni"
+              />
+              <label for="kamp2-omni"
+                ><strong>Omnisportkamp</strong> – geboortejaar '18-‘13 - 1ste
+                leerjaar tem 6e leerjaar</label
+              >
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="kind2-medisch"
+                >Zijn er medische aandachtspunten die we vóór de kampweek moeten
+                weten?</label
+              >
+              <textarea
+                id="kind2-medisch"
+                name="kind2-medisch"
+                placeholder="Typ hier..."
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="kind2-voorkeur"
+                >Heeft jouw kind een voorkeur om bij iemand in de groep te
+                zitten? (optioneel)</label
+              >
+              <textarea
+                id="kind2-voorkeur"
+                name="kind2-voorkeur"
+                placeholder="Typ hier..."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-add-remove">
+            <button type="button" class="btn add-kind">
+              ➕ Voeg nog een kind toe
+            </button>
+            <button type="button" class="btn remove-kind">
+              🗑️ Verwijder dit kind
+            </button>
+          </div>
+        </section>
+      </section>
+      <div class="form-navigation">
+        <a href="index.html" class="btn back">← Vorige stap</a>
+        <a href="overzicht.html" class="btn next">Volgende stap →</a>
+      </div>
+    </main>
+  </body>
+</html>

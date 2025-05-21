@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stap 3 – Overzicht & betaling</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="form-container">
+      <!-- Tabs bovenaan -->
+      <div class="step-tabs">
+        <div class="step-tab">Stap 1: Gegevens van ouder/betaler</div>
+        <div class="step-tab">Stap 2: Gegevens van het kind</div>
+        <div class="step-tab active">Stap 3: Controle & betaling</div>
+      </div>
+
+      <!-- Titel en instructie -->
+      <section class="form-step">
+        <h2>Overzicht van je inschrijving en betaalmethode kiezen</h2>
+        <p>
+          Alles ingevuld? Super! Kies nu je gewenste betaalmethode en bevestig
+          je inschrijving.
+        </p>
+
+        <!-- Contactgegevens -->
+        <div class="card-block">
+          <div class="card-header">
+            <h3>Facturatie & contact</h3>
+            <a href="#" class="edit-link">Wijzigen</a>
+          </div>
+          <ul class="info-list">
+            <li><strong>Naam ouder:</strong> Marie Claes</li>
+            <li><strong>Rijksregisternummer:</strong> 84.05.12-154.21</li>
+            <li><strong>Geboortedatum:</strong> 12/05/1988</li>
+            <li><strong>Adres:</strong> Lindendreef 12, 1982 Elewijt</li>
+            <li><strong>E-mail:</strong> marie.claes@gmail.com</li>
+            <li><strong>GSM:</strong> +32 478 00 00 00</li>
+            <li><strong>Betaler:</strong> Ja</li>
+          </ul>
+        </div>
+
+        <h3 class="subsection-title">Overzicht per kind</h3>
+
+        <!-- Kind 1 -->
+        <div class="card-block">
+          <div class="card-header green">
+            <h3>Overzicht kind 1</h3>
+            <a href="#" class="edit-link">Wijzigen</a>
+          </div>
+          <ul class="info-list">
+            <li><strong>Volledige naam:</strong> Maurice Mertens</li>
+            <li><strong>Rijksregisternummer:</strong> 25.05.20-217.31</li>
+            <li><strong>Geboortedatum:</strong> 25 mei 2020</li>
+            <li><strong>Geslacht:</strong> Jongen</li>
+            <li><strong>Kampkeuze:</strong> Sport & Spel (14–18 april 2025)</li>
+            <li><strong>Groepsvoorkeur:</strong> Bij vriendje Jasper</li>
+            <li><strong>Medische info:</strong> Allergisch aan noten</li>
+          </ul>
+          <span class="delete-icon">🗑️</span>
+        </div>
+
+        <!-- Kind 2 -->
+        <div class="card-block">
+          <div class="card-header green">
+            <h3>Overzicht kind 2</h3>
+            <a href="#" class="edit-link">Wijzigen</a>
+          </div>
+          <ul class="info-list">
+            <li><strong>Volledige naam:</strong> Louis Mertens</li>
+            <li><strong>Rijksregisternummer:</strong> 12.07.16-165.04</li>
+            <li><strong>Geboortedatum:</strong> 12 juli 2016</li>
+            <li><strong>Geslacht:</strong> Jongen</li>
+            <li>
+              <strong>Kampkeuze:</strong> Omnisportkamp (14–18 april 2025)
+            </li>
+            <li><strong>Groepsvoorkeur:</strong> Geen voorkeur opgegeven</li>
+            <li><strong>Medische info:</strong> Geen bijzonderheden</li>
+          </ul>
+          <span class="delete-icon">🗑️</span>
+        </div>
+
+        <!-- Prijsberekening -->
+        <h3 class="subsection-title">Prijsberekening</h3>
+        <div class="card-block">
+          <div class="card-header">
+            <h3>Factuur</h3>
+            <a href="#" class="edit-link">Wijzigen</a>
+          </div>
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Kind</th>
+                <th>Kamp</th>
+                <th>Bedrag</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Maurice</td>
+                <td>Sport & Spel</td>
+                <td>€135</td>
+              </tr>
+              <tr>
+                <td>Louis</td>
+                <td>Omnisportkamp</td>
+                <td>€125</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2"><strong>Totaal</strong></td>
+                <td><strong>€260</strong></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <!-- Betaling -->
+        <h3 class="subsection-title">Kies je betaal methode</h3>
+        <div class="card-block">
+          <div class="card-header green">
+            <h3>Kies uit onderstaande opties</h3>
+          </div>
+          <div class="payment-icons">
+            <img src="bancontact.png" alt="Bancontact" />
+            <img src="mastercard.png" alt="Mastercard" />
+            <img src="visa.png" alt="Visa" />
+            <img src="paypal.png" alt="PayPal" />
+          </div>
+        </div>
+
+        <!-- Toestemmingen -->
+        <h3 class="subsection-title">Toestemmingen</h3>
+
+        <div class="consent-block">
+          <label
+            ><input type="checkbox" /> Ik verklaar dat de gegevens correct zijn
+            ingevuld.</label
+          ><br />
+          <label
+            ><input type="checkbox" /> Ik ga akkoord met het
+            annuleringsreglement.</label
+          ><br />
+          <label
+            ><input type="checkbox" /> Ik wens de nieuwsbrief te
+            ontvangen.</label
+          ><br />
+          <label
+            ><input type="checkbox" /> Voeg dit meteen aan je agenda toe.</label
+          >
+        </div>
+
+        <p class="disclaimer">
+          Door je inschrijving geef je toestemming om foto’s (geen individuele)
+          van jouw sporter(s) op onze webpagina of op onze sociale media-kanalen
+          te plaatsen. Indien je niet wenst dat er foto’s genomen worden waarop
+          jouw sporter zichtbaar is, dien je dit expliciet via mail aan ons door
+          te geven. Indien je wenst dat bepaalde foto’s verwijderd worden, doen
+          we dit vanzelfsprekend onmiddellijk.
+          <a href="mailto:thegreenpuffins@gmail.com"
+            >thegreenpuffins@gmail.com</a
+          >
+        </p>
+      </section>
+      <!-- Navigatie -->
+      <div class="form-navigation">
+        <a href="kind.html" class="btn back">← Vorige stap</a>
+        <button type="submit" class="btn next green">
+          Inschrijving verzenden
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

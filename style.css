@@ -384,7 +384,7 @@ h2 {
 }
 
 label {
-  font-weight: bold;
+  /* font-weight: bold; */
   margin-bottom: 5px;
 }
 
@@ -636,4 +636,198 @@ input[type="date"]:focus {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+
+.kampkeuze-select {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.kampkeuze-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.kampkeuze-option label {
+  font-size: 0.95em;
+  line-height: 1.4;
+  color: #292929;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.form-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.kind-prijs {
+  font-size: 1em;
+  font-weight: normal;
+  color: #339a00;
+}
+
+.form-instructions {
+  margin-bottom: 20px;
+}
+
+/* Algemene blokken */
+.card-block {
+  background-color: #ffffff;
+  padding: 20px 24px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d7e2d1;
+  padding: 12px 20px;
+  border-radius: 8px 8px 0 0;
+  margin: -20px -24px 16px -24px;
+}
+
+.card-header.green {
+  background-color: #1c4b21;
+  color: white;
+}
+
+.card-header h3 {
+  font-size: 1em;
+  margin: 0;
+}
+
+.edit-link {
+  font-size: 0.9em;
+  text-decoration: underline;
+  color: #339a00;
+  font-weight: bold;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-list li {
+  padding: 4px 0;
+  font-size: 0.95em;
+}
+
+.delete-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #737272;
+}
+
+/* Prijzentabel */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.price-table th,
+.price-table td {
+  text-align: left;
+  padding: 8px;
+  font-size: 0.95em;
+}
+
+.price-table th {
+  border-bottom: 2px solid #eaeaea;
+}
+
+.price-table td:last-child {
+  text-align: right;
+}
+
+.price-table tfoot td {
+  font-weight: bold;
+  border-top: 2px solid #eaeaea;
+}
+
+/* Betaling */
+.payment-icons {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  align-items: center;
+}
+
+.payment-icons img {
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Toestemmingen */
+.consent-block {
+  background-color: #f5f5f5;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 0.95em;
+  margin-bottom: 30px;
+}
+
+.consent-block label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Navigatie */
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.btn.next.green {
+  background-color: #339a00;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95em;
+}
+
+.disclaimer {
+  font-size: 0.75em;
+  color: #737272;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+.disclaimer a {
+  color: #339a00;
+  text-decoration: underline;
+}
+
+.subsection-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #292929;
+  margin: 32px 0 16px;
+  padding: 12px 0;
+  border-top: 1px solid #4a4a4a;
+  border-bottom: 1px solid #4a4a4a;
 }
