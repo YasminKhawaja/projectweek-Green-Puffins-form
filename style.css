@@ -831,3 +831,113 @@ input[type="date"]:focus {
   border-top: 1px solid #4a4a4a;
   border-bottom: 1px solid #4a4a4a;
 }
+
+/* BEDANKPAGINA */
+body.thankyou-body {
+  background-color: #fffff9;
+  font-family: Tahoma, sans-serif;
+  color: #292929;
+  margin: 0;
+  padding: 0;
+}
+
+.thankyou-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 60px;
+}
+
+.avatar {
+  height: 60px;
+}
+
+.confirmation-box {
+  background: #ffffff;
+  border: 4px solid #d7e2d1;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.confirmation-box h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.confirmation-box h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.confirmation-box ul {
+  padding-left: 1rem;
+}
+
+.confirmation-box ul li {
+  margin-bottom: 0.5rem;
+}
+
+.confirmation-box a {
+  color: #339a00;
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-icons img {
+  height: 24px;
+  margin-right: 1rem;
+}
+
+.thankyou-gallery {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 2rem;
+  align-items: flex-end; */
+  /* float: right;
+  width: 48%;
+  margin-left: 2rem;
+  border-radius: 4px; */
+
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 2rem;
+}
+
+.thankyou-gallery img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.btn-green {
+  display: inline-block;
+  background-color: #339a00;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
