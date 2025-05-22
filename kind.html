@@ -30,13 +30,6 @@
 
       <!-- Formulier kind 1 -->
       <section class="form-step">
-        <!-- <div class="form-header">
-          <h2>Gegevens van je kind</h2>
-          <span class="kind-prijs">Kind 1: €135</span>
-        </div>
-        <p class="form-instructions">
-          Vul hier de gegevens in van het kind dat je wil inschrijven.
-        </p> -->
         <div class="form-header">
           <h2 class="form-title">Gegevens van je kind</h2>
           <span class="kind-prijs">Kind 1: €135</span>
@@ -101,18 +94,6 @@
           <label><input type="radio" name="geslacht" value="x" /> X</label>
         </div>
 
-        <!-- <div class="form-row kampkeuze-select">
-          <label>Kampkeuze*</label>
-          <label
-            ><input type="radio" name="kampkeuze" value="spel" /> Sport en spel
-            – geboortejaar '21-‘19 - 1ste kleuterklas tem 3e kleuterklas</label
-          >
-          <label
-            ><input type="radio" name="kampkeuze" value="omni" /> Omnisportkamp
-            – geboortejaar '18-‘13 - 1ste leerjaar tem 6e leerjaar</label
-          >
-        </div> -->
-
         <div class="form-row kampkeuze-select">
           <label><strong>Kampkeuze*</strong></label>
 
@@ -158,160 +139,140 @@
           </div>
         </div>
 
+        <div id="children-container">
+          <!-- Hier worden de kindblokken toegevoegd -->
+        </div>
+
         <div class="form-add-button">
-          <button type="button" class="btn add-kind">
+          <button type="button" class="btn add-kind" id="add-kind-btn">
             ➕ Voeg nog een kind toe
           </button>
         </div>
-
-        <!-- EXTRA KIND 2 -->
-        <section class="form-step extra-kind">
-          <div class="extra-kind-header">
-            <h3>Vul nu de info in voor het volgende kind</h3>
-            <p>
-              Vul hier de gegevens in van wie je de betaling uitvoert, zodat
-              alles correct verwerkt wordt.
-            </p>
-          </div>
-
-          <div class="form-header">
-            <h2>Gegevens van je kind</h2>
-            <span class="kind-prijs">Kind 2: €125</span>
-          </div>
-
-          <p class="form-instructions">
-            Laat ons ook weten wie je nog inschrijft voor deze kampweek.
-          </p>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="kind2-voornaam"><strong>Voornaam*</strong></label>
-              <input
-                type="text"
-                id="kind2-voornaam"
-                name="kind2-voornaam"
-                placeholder="Voer de voornaam van het kind in"
-              />
-            </div>
-            <div class="form-group">
-              <label for="kind2-achternaam"><strong>Achternaam*</strong></label>
-              <input
-                type="text"
-                id="kind2-achternaam"
-                name="kind2-achternaam"
-                placeholder="Voer de achternaam van het kind in"
-              />
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="kind2-rrn"
-                ><strong>Rijksregisternummer*</strong></label
-              >
-              <input
-                type="text"
-                id="kind2-rrn"
-                name="kind2-rrn"
-                placeholder="Voer het rijksregisternummer van het kind in"
-              />
-              <small>Formaat: xx.xx.xx-xxx.xx</small>
-            </div>
-            <div class="form-group">
-              <label for="kind2-geboortedatum"
-                ><strong>Geboortedatum*</strong></label
-              >
-              <input
-                type="date"
-                id="kind2-geboortedatum"
-                name="kind2-geboortedatum"
-                placeholder="DD/MM/YYYY"
-              />
-            </div>
-          </div>
-
-          <div class="form-row gender-select">
-            <label><strong>Geslacht*</strong></label>
-            <label
-              ><input type="radio" name="kind2-geslacht" value="jongen" />
-              Jongen</label
-            >
-            <label
-              ><input type="radio" name="kind2-geslacht" value="meisje" />
-              Meisje</label
-            >
-            <label
-              ><input type="radio" name="kind2-geslacht" value="x" /> X</label
-            >
-          </div>
-
-          <div class="form-row kampkeuze-select">
-            <label><strong>Kampkeuze*</strong></label>
-            <div class="kampkeuze-option">
-              <input
-                type="radio"
-                id="kamp2-spel"
-                name="kind2-kampkeuze"
-                value="spel"
-              />
-              <label for="kamp2-spel"
-                >Sport en spel – geboortejaar '21-‘19 - 1ste kleuterklas tem 3e
-                kleuterklas</label
-              >
-            </div>
-            <div class="kampkeuze-option">
-              <input
-                type="radio"
-                id="kamp2-omni"
-                name="kind2-kampkeuze"
-                value="omni"
-              />
-              <label for="kamp2-omni"
-                >Omnisportkamp– geboortejaar '18-‘13 - 1ste leerjaar tem 6e
-                leerjaar</label
-              >
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="kind2-medisch"
-                >Zijn er medische aandachtspunten die we vóór de kampweek moeten
-                weten?</label
-              >
-              <textarea
-                id="kind2-medisch"
-                name="kind2-medisch"
-                placeholder="Typ hier..."
-              ></textarea>
-            </div>
-            <div class="form-group">
-              <label for="kind2-voorkeur"
-                >Heeft jouw kind een voorkeur om bij iemand in de groep te
-                zitten? (optioneel)</label
-              >
-              <textarea
-                id="kind2-voorkeur"
-                name="kind2-voorkeur"
-                placeholder="Typ hier..."
-              ></textarea>
-            </div>
-          </div>
-
-          <div class="form-add-remove">
-            <button type="button" class="btn add-kind">
-              ➕ Voeg nog een kind toe
-            </button>
-            <button type="button" class="btn remove-kind">
-              🗑️ Verwijder dit kind
-            </button>
-          </div>
-        </section>
       </section>
       <div class="form-navigation">
         <a href="index.html" class="btn back">← Vorige stap</a>
         <a href="overzicht.html" class="btn next">Volgende stap →</a>
       </div>
     </main>
+
+    <template id="kind-template">
+      <div class="kind-block">
+        <div class="form-header">
+          <h2 class="form-title">Gegevens van je kind</h2>
+          <span class="kind-prijs">Kind X: €XXX</span>
+        </div>
+        <!-- Hier plak je de volledige kind-form fields -->
+        <button type="button" class="btn remove-kind">
+          Verwijder dit kind
+        </button>
+      </div>
+    </template>
+    <!-- <script>
+      class ChildManager {
+        constructor(containerId, buttonId) {
+          this.container = document.getElementById(containerId);
+          this.addButton = document.getElementById(buttonId);
+          this.counter = 0;
+          this.init();
+        }
+
+        init() {
+          this.addButton.addEventListener("click", () => this.addChild());
+          this.addChild(); // Voeg standaard 1 kind toe bij start
+        }
+
+        addChild() {
+          this.counter++;
+          const prijs = this.counter === 1 ? 135 : 125;
+          const childId = `kind-${this.counter}`;
+
+          const section = document.createElement("section");
+          section.classList.add("form-step", "kind-block");
+          section.setAttribute("data-id", this.counter);
+
+          section.innerHTML = `
+        <div class="form-header">
+          <h2 class="form-title">Gegevens van je kind</h2>
+          <span class="kind-prijs">Kind ${this.counter}: €${prijs}</span>
+        </div>
+        <p class="form-instructions">
+          Vul hier de gegevens in van het kind dat je wil inschrijven.
+        </p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="${childId}-voornaam"><strong>Voornaam*</strong></label>
+            <input type="text" id="${childId}-voornaam" name="${childId}-voornaam" placeholder="Voornaam kind ${this.counter}" />
+          </div>
+          <div class="form-group">
+            <label for="${childId}-achternaam"><strong>Achternaam*</strong></label>
+            <input type="text" id="${childId}-achternaam" name="${childId}-achternaam" placeholder="Achternaam kind ${this.counter}" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="${childId}-rrn"><strong>Rijksregisternummer*</strong></label>
+            <input type="text" id="${childId}-rrn" name="${childId}-rrn" placeholder="xx.xx.xx-xxx.xx" />
+            <small>Formaat: xx.xx.xx-xxx.xx</small>
+          </div>
+          <div class="form-group">
+            <label for="${childId}-geboortedatum"><strong>Geboortedatum*</strong></label>
+            <input type="date" id="${childId}-geboortedatum" name="${childId}-geboortedatum" />
+          </div>
+        </div>
+
+        <div class="form-row gender-select">
+          <label><strong>Geslacht*</strong></label>
+          <label><input type="radio" name="${childId}-geslacht" value="jongen" /> Jongen</label>
+          <label><input type="radio" name="${childId}-geslacht" value="meisje" /> Meisje</label>
+          <label><input type="radio" name="${childId}-geslacht" value="x" /> X</label>
+        </div>
+
+        <div class="form-row kampkeuze-select">
+          <label><strong>Kampkeuze*</strong></label>
+          <div class="kampkeuze-option">
+            <input type="radio" id="${childId}-spel" name="${childId}-kampkeuze" value="spel" />
+            <label for="${childId}-spel">Sport en spel – geboortejaar '21-‘19 - 1ste kleuterklas tem 3e kleuterklas</label>
+          </div>
+          <div class="kampkeuze-option">
+            <input type="radio" id="${childId}-omni" name="${childId}-kampkeuze" value="omni" />
+            <label for="${childId}-omni">Omnisportkamp – geboortejaar '18-‘13 - 1ste leerjaar tem 6e leerjaar</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="${childId}-medisch">Medische aandachtspunten</label>
+            <textarea id="${childId}-medisch" name="${childId}-medisch" placeholder="Typ hier..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="${childId}-voorkeur">Groepsvoorkeur (optioneel)</label>
+            <textarea id="${childId}-voorkeur" name="${childId}-voorkeur" placeholder="Typ hier..."></textarea>
+          </div>
+        </div>
+
+        <div class="form-add-remove">
+          <button type="button" class="btn remove-kind">🗑️ Verwijder dit kind</button>
+        </div>
+      `;
+
+          section
+            .querySelector(".remove-kind")
+            .addEventListener("click", () => {
+              this.container.removeChild(section);
+              // optioneel: hernummer de titels na verwijderen
+            });
+
+          this.container.appendChild(section);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        new ChildManager("children-container", "add-kind-btn");
+      });
+    </script>
+
+    <script type="module" src="kindbeheer.js"></script> -->
   </body>
 </html>
