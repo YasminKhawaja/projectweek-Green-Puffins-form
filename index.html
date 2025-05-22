@@ -344,50 +344,6 @@
             </div>
           </div>
 
-          <!-- <div class="form-row checkbox-row">
-            <p>
-              <strong
-                >Ben jij ook de persoon die betaalt voor deze
-                inschrijving?</strong
-              >
-            </p>
-            <label
-              ><input type="radio" name="betaler" value="ja" checked /> Ja, ik
-              betaal zelf.</label
-            >
-            <label
-              ><input type="radio" name="betaler" value="nee" /> Nee, ik wil
-              andere gegevens invullen voor de betaler.</label
-            >
-          </div>
-
-          <div class="form-navigation">
-            <a href="#" class="btn back">← Terug naar de homepage</a>
-            <button type="submit" class="btn next">Volgende stap →</button>
-          </div> -->
-
-          <!-- <div class="form-radiogroup">
-            <p>
-              <strong
-                >Ben jij ook de persoon die betaalt voor deze
-                inschrijving?</strong
-              >
-            </p>
-            <label
-              ><input type="radio" name="betaler" value="ja" checked /> Ja, ik
-              betaal zelf.</label
-            >
-            <label
-              ><input type="radio" name="betaler" value="nee" /> Nee, ik wil
-              andere gegevens invullen voor de betaler.</label
-            >
-          </div>
-
-          <div class="form-navigation">
-            <a href="/" class="btn back">← Terug naar de homepage</a>
-            <button type="submit" class="btn next">Volgende stap →</button>
-          </div> -->
-
           <div class="form-bottom-section">
             <div class="form-radiogroup">
               <p>
@@ -409,11 +365,13 @@
 
           <!-- EXTRA BLOK voor betaler, standaard verborgen -->
           <div id="betaler-extra" class="extra-betaler-block hidden">
-            <h3>Gegevens van de persoon die betaalt</h3>
-            <p>
-              Vul hier de gegevens in van wie de betaling uitvoert, zodat alles
-              correct verwerkt wordt.
-            </p>
+            <div id="groene-container">
+              <h3>Gegevens van de persoon die betaalt</h3>
+              <p>
+                Vul hier de gegevens in van wie de betaling uitvoert, zodat
+                alles correct verwerkt wordt.
+              </p>
+            </div>
 
             <div class="form-row">
               <div class="form-group">
@@ -514,15 +472,61 @@
               </div>
             </div>
 
-            <button type="button" class="btn cancel-btn">Ongedaan maken</button>
+            <button type="button" id="betaler-annuleren" class="btn cancel-btn">
+              Ongedaan maken
+            </button>
           </div>
         </form>
       </section>
 
       <div class="form-navigation">
         <a href="/" class="btn back">← Terug naar de homepage</a>
-        <button type="submit" class="btn next">Volgende stap →</button>
+        <a href="kind.html" class="btn next">Volgende stap →</a>
       </div>
     </main>
+
+    <script>
+      class PayerToggle {
+        constructor(radioName, targetId, cancelButtonId) {
+          this.radios = document.querySelectorAll(`input[name="${radioName}"]`);
+          this.target = document.getElementById(targetId);
+          this.cancelButton = document.getElementById(cancelButtonId);
+          this.init();
+        }
+
+        init() {
+          this.radios.forEach((radio) => {
+            radio.addEventListener("change", () => this.toggle());
+          });
+
+          if (this.cancelButton) {
+            this.cancelButton.addEventListener("click", () => this.reset());
+          }
+
+          this.toggle(); // Initiele toestand
+        }
+
+        toggle() {
+          const selected = [...this.radios].find((r) => r.checked);
+          if (selected && selected.value === "nee") {
+            this.target.classList.remove("hidden");
+          } else {
+            this.target.classList.add("hidden");
+          }
+        }
+
+        reset() {
+          const jaRadio = [...this.radios].find((r) => r.value === "ja");
+          if (jaRadio) {
+            jaRadio.checked = true;
+            this.toggle();
+          }
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        new PayerToggle("betaler", "betaler-extra", "betaler-annuleren");
+      });
+    </script>
   </body>
 </html>
